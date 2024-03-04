@@ -257,11 +257,12 @@ html, body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url("https://cdn-fsly.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.fc/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/en_US/v1709119507195/img/202402/20240222-homepage/0222_hp_c02_bg.jpg?yocs=kQ_l8_kY_");
+    background-image: url("page2-bg.jpg");
     background-repeat: no-repeat;
-    object-fit: cover;
+    background-size: cover; /* This ensures the image covers the entire background */
+    background-position: center center; /* This centers the image within the container */
+    background-color: #041e3a;
 }
-
 
 .scrolling-container {
     white-space: nowrap;
@@ -354,7 +355,7 @@ html, body {
 }
 
 .carousel-div h2 {
-    color: #041e3a;
+    color: #ffffff;
     text-align: center;
     font-size: 2.5em;
     font-family: "LeJeuneDeck-Regular", Times, serif;
