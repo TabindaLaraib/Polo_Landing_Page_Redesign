@@ -1,0 +1,1376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    background-color: #041e3a;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.container-fluid p {
+    font-size: 1vw;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.container-fluid span {
+    text-decoration: underline;
+}
+
+.container-fluid a {
+    display: flex;
+    font-family: sans-serif;
+    font-size: 1vw;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.container-fluid #right_tags {
+    display: flex;
+    padding-left: 200px;
+}
+
+.container-fluid i {
+    margin-right: 5px;
+}
+
+.page1 {
+    min-height: 120vh;
+    width: 100%;
+}
+
+.menu {
+    width: 100%;
+    height: 10vh;
+    padding: 10px 2vw;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    /* Adjust the background color as needed */
+}
+
+
+
+.menu:hover {
+    background-color: white;
+}
+
+.menu:hover h1 {
+    color: #041e3a;
+
+}
+
+.menu:hover li a {
+    color: #041e3a;
+}
+
+.menu h1 {
+    font-family: 'RL-icons.ttf';
+    color: aliceblue;
+    margin: 0;
+    font-size: 2vw;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu li {
+    position: relative;
+    margin-top: 1vw;
+}
+
+.main-menu li a {
+    font-family: RL_DroidKufi, Founders Grotesk Mono Regular, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 0.9375rem;
+    font-size: 0.6875rem;
+    line-height: 0.90909em;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    padding: 1vh;
+    background-color: #ffffff;
+    color: black;
+    white-space: nowrap;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    overflow: hidden;
+}
+
+.dropdown li a {
+    text-decoration: none;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 1vh;
+    list-style: none;
+}
+
+.dropdown li a {
+    display: block;
+    text-decoration: none;
+    line-height: 2vh;
+    font-family: 'RL-icons.ttf';
+    font-size: 15px;
+}
+
+.main-menu li:hover .dropdown {
+    display: block;
+}
+
+.main-menu li:hover>a {
+    text-decoration: underline;
+}
+
+
+
+
+#check {
+    display: none;
+}
+.icons i {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 5%;
+}
+
+.back-video {
+    position: absolute;
+    width: 100%;
+    /* Ensure the video spans the entire width */
+    height: 100%;
+    /* Set the height to 100% to fit within the page */
+    object-fit: cover;
+    /* Maintain video aspect ratio and cover the entire container */
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.buttons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttons a {
+    font-family: sans-serif;
+    font-size: 2vh;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 2vw 1vw;
+    position: relative;
+}
+
+
+.buttons a:hover {
+    color: #041e3a;
+    text-decoration: underline;
+}
+
+.content {
+    text-align: center;
+    margin-top: 30%;
+}
+
+.content a {
+    text-decoration: none;
+    color: white;
+}
+
+.content a h1 {
+    font-size: 8vw;
+    font-family: 'RL-icons';
+    font-weight: 400;
+    letter-spacing: 1vw;
+}
+
+.content a h4 {
+    font-size: 3vh;
+    font-family: 'RL-icons';
+    letter-spacing: 1vh;
+    margin-top: -4vh;
+    font-weight: 200;
+}
+
+.content a h2 {
+    font-size: 5vh;
+    font-family: 'RL-icons';
+    letter-spacing: 1vh;
+    font-weight: 100;
+}
+
+.page2 {
+    height: 150vh;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("https://cdn-fsly.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.fc/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/en_US/v1709119507195/img/202402/20240222-homepage/0222_hp_c02_bg.jpg?yocs=kQ_l8_kY_");
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+
+.scrolling-container {
+    white-space: nowrap;
+    background-color: #041e3a;
+    height: 7vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrolling-container p {
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1vh;
+}
+
+
+
+.centered-div {
+    height: 130vh;
+    width: 100%;
+    padding: 8vw 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.men-div {
+    height: 110%;
+    width: 45%;
+    background-image: url("https://www.ralphlauren.com/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/en_US/v1709119507195/img/202402/20240222-homepage/0222_hp_c02_img.jpg");
+    background-size: 100% 100%;
+    /* Fill the entire background without maintaining aspect ratio */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.men-div h2 {
+    font-size: 1.75em;
+    line-height: 1.429em;
+    letter-spacing: 0;
+    text-align: left;
+    color: white;
+    font-family: LeJeuneDeck-Regular, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    position: relative;
+    top: 105vh;
+    left: 0;
+}
+
+.men-div a {
+    font-family: "Founders Grotesk Mono Regular", Arial, Helvetica, sans-serif;
+    font-size: .688em;
+    line-height: .909em;
+    letter-spacing: .091em;
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    padding-bottom: calc(0.8em + 1px);
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: 103vh;
+    left: -16.5vw;
+}
+
+.men-div a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    /* Set the color of the line to white or your desired color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.men-div a:hover::after {
+    transform: scaleX(-1);
+}
+
+.carousel-div {
+    height: 100%;
+    width: 42%;
+    background-color: transparent;
+}
+
+.carousel-div h2 {
+    color: #041e3a;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+}
+
+.carousel-inner {
+    perspective: 1000px;
+}
+
+.carousel-item {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.carousel-item.active {
+    transform: translateZ(0);
+}
+
+.carousel-item.next,
+.carousel-item.prev {
+    transform: translateZ(-100px);
+}
+
+.carousel-item.next.active,
+.carousel-item.prev.active {
+    transform: translateZ(0);
+}
+
+.cta-svg:hover {
+    transform: translateY(-5px);
+}
+
+.content-p2 a:hover .cta-svg {
+    transform: translateY(-5px);
+}
+
+.cta-svg {
+    transition: transform 0.4s ease-in-out;
+}
+
+
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    margin: 5vw 0;
+    background-image: url("https://www.ralphlauren.global/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/en_PK/v1709190381626/img/202402/02062024-eu-hp/0206_hp_c09_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Use background-size instead of object-fit */
+    background-position: center;
+    /* Center the background image */
+}
+
+.content-p3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 67vh;
+    left: 0;
+}
+
+.content-p3 h1 {
+    margin-bottom: 0.35em;
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+    font-size: 3.7em;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #ffffff;
+}
+
+.content-p3 p {
+    width: 45vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.125em;
+    line-height: 1.3333;
+    -webkit-font-smoothing: antialiased;
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+    color: white;
+}
+
+.content-p3 .links {
+    align-items: center;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2em 0 2em;
+    font-family: "Founders Grotesk Mono Regular", Arial, Helvetica, sans-serif;
+    font-size: .588em;
+    line-height: 1em;
+    letter-spacing: .091em;
+    text-transform: uppercase;
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    padding-bottom: calc(0.8em + 1px);
+}
+
+.links a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    /* Set the color of the line to white or your desired color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.links a:hover::after {
+    transform: scaleX(-1);
+}
+
+
+.page4 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 5vw 0;
+    overflow: hidden;
+    /* Ensure the overlay doesn't cause scrollbars */
+}
+
+.page4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.169), rgba(0, 0, 0, 0.562)), url("https://www.ralphlauren.global/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/en_PK/v1709190381626/img/202312/12292023-eu-hp/1228_hp_c09_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-p4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 80vh;
+    left: 0;
+    line-height: 2.5rem;
+}
+
+.content-p4 img {
+    z-index: 99;
+    width: 50%;
+}
+
+.content-p4 .links a {
+    font-family: "Founders Grotesk Mono Regular", Arial, Helvetica, sans-serif;
+    font-size: .688em;
+    line-height: .909em;
+    letter-spacing: .091em;
+    text-transform: uppercase;
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    color: white;
+    z-index: 999;
+    padding-bottom: calc(0.8em + 1px);
+}
+
+.page5 {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    margin: 5vw 0;
+    overflow: hidden;
+    /* Ensure the overlay doesn't cause scrollbars */
+}
+
+
+
+.content-p5 {
+    display: flex;
+    margin: 2vw 0;
+    height: 100%;
+}
+
+
+
+
+.p5-part1 {
+    padding: 10vw 5vw;
+    width: 25%;
+}
+
+.p5-part1 h3 {
+    font-family: LeJeuneDeck-Regular, 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: currentColor;
+    text-align: left;
+    font-size: 1.95em;
+    letter-spacing: 0.02em;
+}
+
+.p5-part1 h3 span {
+    font-family: LeJeuneDeck-Regular, 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: currentColor;
+    text-align: left;
+    font-size: 2em;
+    letter-spacing: 0.02em;
+}
+
+.p5-part1 p {
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+    font-size: 1.125em;
+    margin-top: 0.85em;
+    margin-bottom: 0;
+    line-height: 1.3em;
+    font-weight: 500;
+}
+
+
+.content-p5 .p5-part2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.elem {
+    flex: 1;
+    width: 20%;
+    /* Adjust the width of the .elem elements */
+    height: 100%;
+    /* Set a height for the .elem elements */
+    margin-right: 10px;
+    /* Adjust the margin to create spacing between .elem elements */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    /* Align items to the bottom of the card */
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: flex-end;
+    /* Align content to the bottom of the card */
+    height: 100%;
+    /* Ensure full height of the card */
+}
+
+.card-title {
+    margin-bottom: 20px;
+    /* Adjust as needed for spacing between image and title */
+    color: white;
+    /* Set the color for the title */
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: LeJeuneDeck-Regular, 'Times New Roman', Times, serif;
+}
+
+.page6 {
+    height: 60vh;
+    width: 100%;
+    margin: 5vw 0;
+}
+
+.footer-container {
+    margin: 2vw 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dets {
+    flex: 1;
+    width: 20%;
+    min-height: 100px;
+    margin: 0 0.5%;
+}
+
+.dets h3 {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .00313rem;
+    font-family: RL_DroidKufi, Founders Grotesk Text Medium, Helvetica, Arial, sans-serif;
+    font-style: Normal;
+    font-size: 1vw;
+    font-weight: 700;
+    line-height: 1.999rem;
+}
+
+.dets h4 {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .00313rem;
+    font-family: RL_DroidKufi, Founders Grotesk Text Medium, Helvetica, Arial, sans-serif;
+    font-style: Normal;
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+.dets ul li {
+    list-style: none;
+    line-height: 1.555rem;
+}
+
+.dets ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: RL_DroidKufi, Founders Grotesk Text Medium, Helvetica, Arial, sans-serif;
+    font-style: Normal;
+    font-size: 1vw;
+    text-decoration: none;
+    font-size: .75rem;
+    font-family: RL_DroidKufi, Founders Grotesk text Regular, Helvetica, Arial, sans-serif;
+    font-style: Normal;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: .00156rem;
+}
+
+.btn-outline-primary {
+    font-family: RL_DroidKufi, Founders Grotesk Mono Regular, Arial, Helvetica, sans-serif;
+    padding: 0.99911rem 0 0.5rem;
+    background-color: #041e3a;
+    border: 1px solid #041e3a;
+    color: #fff;
+    font-size: .65rem;
+    letter-spacing: .05em;
+    width: 25%;
+    min-height: 2.25rem;
+    padding: 0.123rem 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+}
+
+
+#button-addon2:hover {
+    background-color: #254466;
+}
+
+.dets p {
+    font-size: .875rem;
+    color: #000000;
+    letter-spacing: .0125rem;
+    line-height: 1.43em;
+    box-sizing: inherit;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    --site-content-width: 1800px;
+    --site-content-max-width: 1920px;
+}
+
+.footer-container .dets:not(:last-child) {
+    border-right: 1px solid #cacaca;
+    padding-right: 5vh;
+}
+
+.footer {
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 2vw;
+}
+
+.social-icon {
+    display: inline-block;
+    background-color: rgb(56, 82, 130);
+    padding: 0.15543vh 1.112vh;
+    border: none;
+}
+
+.social-icon i {
+    font-size: 1rem;
+    color: white;
+    border: none;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.7678776vw;
+    padding: 0;
+    margin: 1vw;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .container-fluid {
+        background-color: #041e3a;
+        width: 100%;
+        height: 6vh;
+        padding: 2vh;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+
+    .container-fluid p {
+        font-size: 2.5vw;
+        font-family: sans-serif;
+        font-weight: 500;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-fluid span {
+        text-decoration: underline;
+    }
+
+    .container-fluid a {
+        display: none;
+    }
+
+    .container-fluid #right_tags {
+        display: none;
+    }
+
+    .container-fluid i {
+        display: none;
+    }
+    .page1{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left:0;
+    }
+
+
+    .menu {
+        justify-content: space-between;
+    }
+
+    .icons i {
+        display: inline;
+        margin-right: 25%;
+        color: #041e3a;
+    }
+
+    #close-icon{
+      display: none;
+    }
+    
+    .menu{
+        background-color: #ffffff;
+    }
+    .menu h1{
+        color: #041e3a;
+        font-size: 3vh;
+    }
+
+    .main-menu {
+        position: absolute;
+        top: 8%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #fafafa;
+        overflow: hidden;
+        transition: 0.3s ease-in;
+        
+    }
+
+    #check:checked~.main-menu{
+        height: 19rem;
+        border: 0.1111vh solid rgb(190, 190, 190);
+    }
+    
+ 
+    .menu > ul {
+        display: block !important;
+        flex-direction: column;
+        margin: 0.5rem 0;
+        align-items: left;
+       
+       
+    }
+
+    .main-menu li a{
+        color: #000000;
+        transform: translateY(-20vw );
+        transition: 0.3s ease-in;
+        font-size: 1rem;
+        line-height: 2.9589rem;
+        z-index: 999;
+    }
+
+    .main-menu li:hover .dropdown {
+        display: block;
+    }
+
+
+
+    #check:checked~.main-menu li a{
+       transform: translateY(0);
+       transition-delay: calc(.15s * var(--i));
+    }
+
+
+
+    @media (min-aspect-ratio: 16/9) {
+        .back-video {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    @media (max-aspect-ratio: 16/9) {
+        .back-video {
+            width: auto;
+            height: 100%;
+        }
+    }
+    .back-video{
+        width: 100%;
+            height: 100%;
+            object-fit: cover;
+    }
+    
+
+    
+.content {
+    text-align: center;
+    position: relative;
+    top: 30vh;
+}
+
+.content a {
+    text-decoration: none;
+    color: white;
+    line-height: 5vh;
+}
+
+.content a h1 {
+    font-size: 20vw;
+    line-height: 15vh;
+    font-family: 'RL-icons';
+    font-weight: 400;
+    letter-spacing: 1vw;
+}
+
+.content a h4 {
+    font-size: 1.5vh;
+
+}
+
+.content a h2 {
+    font-size: 5vh;
+}
+
+.buttons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.buttons a {
+    font-family: sans-serif;
+    font-size: 0.777rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.page2 {
+    height: 150vh;
+    width: 100%;
+    background-image: url("https://cdn-fsly.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.fc/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/en_US/v1709119507195/img/202402/20240222-homepage/0222_hp_c02_bg.jpg?yocs=kQ_l8_kY_");
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the entire container while maintaining aspect ratio */
+    background-position: center; /* Center the background image */
+}
+
+
+
+.scrolling-container {
+    white-space: nowrap;
+    background-color: #041e3a;
+    height: 7vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.scrolling-container p {
+    color: white;
+    font-size: 3.5vw;
+    font-weight: bold;
+    padding: 2vh;
+}
+
+
+.centered-div {
+    height: 100vh;
+    width: 100%;
+    padding: 8vw;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.men-div {
+    height: 50vh;
+    width: 100%;
+    background-image: url("https://www.ralphlauren.com/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/en_US/v1709119507195/img/202402/20240222-homepage/0222_hp_c02_img.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.men-div h2 {
+    text-align: left;
+   color: #041e3a;
+    font-weight: 600;
+    position: relative;
+    top: 10vh; /* Adjust the spacing as needed */
+}
+.men-div a {
+    font-family: "Founders Grotesk Mono Regular", Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: #041e3a;
+    font-weight: 700;
+    position: relative;
+    top: 9vh; /* Move to the vertical center */
+   left: 1vw;
+}
+
+
+.carousel-div {
+    display: block;
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    top: 20%;
+}
+
+.carousel-div h2 {
+    color: #041e3a;
+    text-align: center;
+    font-size: 2.1em;
+    font-weight: 600;
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    margin: 20vw 0;
+    background-image: url("https://www.ralphlauren.global/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/en_PK/v1709190381626/img/202402/02062024-eu-hp/0206_hp_c09_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Use background-size instead of object-fit */
+    background-position: center;
+    /* Center the background image */
+}
+
+.content-p3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 70vh;
+    left: 0;
+}
+
+.content-p3 h1 {
+    margin-bottom: 0.35em;
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #ffffff;
+}
+
+.content-p3 p {
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: .8125em;
+    line-height: 1.3333;
+    -webkit-font-smoothing: antialiased;
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+    color: white;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2em 0 2em;
+    font-family: "Founders Grotesk Mono Regular", Arial, Helvetica, sans-serif;
+    font-size: .4688em;
+    line-height: .999909em;
+    letter-spacing: .091em;
+    text-transform: uppercase;
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    padding-bottom: calc(0.8em + 1px);
+}
+
+.page4 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 20vw 0;
+    overflow: hidden;
+    /* Ensure the overlay doesn't cause scrollbars */
+}
+
+
+.content-p4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 80vh;
+    left: 0;
+    line-height: 2.5rem;
+}
+
+.content-p4 img {
+    z-index: 99;
+    width: 80%;
+    
+}
+
+.content-p4 .links a {
+    font-family: "Founders Grotesk Mono Regular", Arial, Helvetica, sans-serif;
+    font-size: .4688em;
+    line-height: .999909em;
+    letter-spacing: .091em;
+    text-transform: uppercase;
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    color: white;
+    z-index: 999;
+    padding-bottom: calc(0.8em + 1px);
+}
+
+.page5 {
+    position: relative;
+    height: 230vh;
+    width: 100%;
+    margin: 15vw 0;
+    overflow: hidden;
+}
+
+
+
+.content-p5 {
+    display: block;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.p5-part1 {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.p5-part1 h3 {
+    font-family: 'LeJeuneDeck-Regular', 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: currentColor;
+    text-align: left;
+    font-size: 1.95em;
+    letter-spacing: 0.02em;
+}
+
+.p5-part1 h3 span {
+    font-family: 'LeJeuneDeck-Regular', 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: currentColor;
+    text-align: left;
+    font-size: 2em;
+    letter-spacing: 0.02em;
+}
+
+.p5-part1 p {
+    font-family: "LeJeuneDeck-Regular", Times, serif;
+    font-size: 1.125em;
+    margin-top: 0.85em;
+    margin-bottom: 0;
+    line-height: 1.3em;
+    font-weight: 500;
+}
+
+.content-p5 .p5-part2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.elem {
+    width: 100%;
+    height: 100%;
+    padding: 2vw 1vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.page6 {
+    height: 100vh;
+    width: 100%;
+    background-color: #ececec;
+}
+
+
+.footer-container {
+    margin: 2vw 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #ececec;
+}
+
+.dets {
+    width: 100%;
+    min-height: auto;
+    margin: 0 0.5%;
+    display: flex;
+}
+.dets .icons{
+    position: absolute;
+    right: 0;
+    margin: 5%;
+}
+
+
+.dets h3 {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .00313rem;
+    font-family: RL_DroidKufi, Founders Grotesk Text Medium, Helvetica, Arial, sans-serif;
+    font-style: Normal;
+    font-size: 2.5vw;
+    font-weight: 700;
+    line-height: 1rem;
+}
+.dets ul li a{
+    display: block;
+    width: max-content;
+    padding: 0vh;
+    color: black;
+    font-size: 1.18827vh;
+    white-space: nowrap;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    overflow: hidden;
+    line-height: 1rem;
+}
+
+
+
+
+.btn-outline-primary {
+    font-family: RL_DroidKufi, Founders Grotesk Mono Regular, Arial, Helvetica, sans-serif;
+    padding: 0.99911rem 0 0.5rem;
+    background-color: #041e3a;
+    border: 1px solid #041e3a;
+    color: #fff;
+    font-size: .55rem;
+    letter-spacing: .05em;
+    width: 15%;
+    min-height: 2.25rem;
+    padding: 0.123rem 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+}
+
+
+#button-addon2:hover {
+    background-color: #254466;
+}
+
+
+#dets4{
+    display: block;
+    padding: 5%;
+}
+.dets h4{
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .00313rem;
+    font-family: RL_DroidKufi, Founders Grotesk Text Medium, Helvetica, Arial, sans-serif;
+    font-style: Normal;
+    font-size: 2.5vw;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+
+
+
+.dets p {
+    font-size: .675rem;
+    color: #000000;
+}
+
+
+.footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ececec;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.icons {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    background-color: rgb(56, 82, 130);
+    padding: 0.15543vh 1.112vh;
+    border: none;
+}
+
+.social-icon i {
+    font-size: 1rem;
+    color: white;
+    border: none;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 2.7678776vw;
+    padding: 0;
+    margin: 1vw;
+    background-color: #ececec;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
